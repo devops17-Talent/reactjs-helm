@@ -42,8 +42,8 @@ service:
   nodeport: 30006
 
 ingress:
-  enabled: false
-  className: ""
+  enabled: true
+  className: "alb"
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "alb"
     alb.ingress.kubernetes.io/scheme: "internet-facing"
