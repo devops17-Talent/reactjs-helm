@@ -8,7 +8,7 @@ image:
   repository: malleshdevops/devopseks17
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "reactjs-v1"
+  tag: "reactjs-v2"
 
 imagePullSecrets: [name: "dockerhub-cred"]
 nameOverride: ""
