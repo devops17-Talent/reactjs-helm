@@ -6,7 +6,7 @@ pipeline{
       sh 'kubectl config use-context arn:aws:eks:us-west-2:897276212041:cluster/devops-eks-gCFGYxzJ'
       }
   }
-    stage('create java namespace'){
+    stage('create frontend namespace'){
       steps{
     sh '''
         myNamespace="frontend"
@@ -14,7 +14,7 @@ pipeline{
          '''
     }
     }
-  stage('deploy java'){
+  stage('deploy reactjs'){
     steps{
     sh 'helm upgrade --install devops-frontend $WORKSPACE --values $WORKSPACE/frontend-values.yaml --namespace frontend '
     }
